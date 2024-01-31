@@ -7,12 +7,12 @@ const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
 const config = {
-  size: 0.65,
+  size: 0.68,
 
   speed: null,
   bounds: null,
 
-  cellCount: 32,
+  cellCount: 28,
   cellSize: null,
 
   ballSize: null,
@@ -46,7 +46,7 @@ const cells = [];
 
 function init() {
   // Set a maximum size for the canvas
-  const maxSize = 800; // You can adjust this value
+  const maxSize = 680; // You can adjust this value
   const windowSize = Math.min(window.innerWidth, window.innerHeight, maxSize);
 
   config.cellSize = Math.trunc((windowSize * config.size) / config.cellCount);
