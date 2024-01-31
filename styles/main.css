@@ -40,6 +40,7 @@ canvas {
   box-shadow: 0 0 50px #0003;
   border-radius: 8px;
   cursor: pointer;
+  max-width: 100%;
 }
 
 .stats {

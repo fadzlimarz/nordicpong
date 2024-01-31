@@ -45,14 +45,15 @@ let balls = [];
 const cells = [];
 
 function init() {
-  config.cellSize = Math.trunc(
-    (Math.min(window.innerWidth, window.innerHeight) * config.size) /
-      config.cellCount
-  );
+  // Set a maximum size for the canvas
+  const maxSize = 800; // You can adjust this value
+  const windowSize = Math.min(window.innerWidth, window.innerHeight, maxSize);
+
+  config.cellSize = Math.trunc((windowSize * config.size) / config.cellCount);
   config.ballSize = config.cellSize / 2;
 
   canvas.width = config.cellCount * config.cellSize;
-  canvas.height = canvas.width;
+  canvas.height = canvas.width; // Keep the square aspect ratio
 
   stats.style.width = `${canvas.width}px`;
 
